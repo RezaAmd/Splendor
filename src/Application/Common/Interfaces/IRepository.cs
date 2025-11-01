@@ -2,7 +2,8 @@
 
 namespace Application.Common.Interfaces;
 
-public interface IRepository<TEntity> where TEntity : BaseEntity
+public interface IRepository<TEntity>
+    where TEntity : BaseEntity
 {
     Task<TEntity?> FindByIdAsync(Guid id, CancellationToken ct = default);
 
