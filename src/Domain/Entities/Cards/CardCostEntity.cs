@@ -2,14 +2,15 @@
 
 public class CardCostEntity : BaseEntity
 {
-    public TokenType TokenId { get; set; }
-    public int Count { get; set; }
-    public Guid CardId { get; set; }
+    public Guid Id { get; private set; } = Guid.NewGuid();
+    public required Guid CardId { get; set; }
+    public GemType GemId { get; set; }
+    public int Amount { get; set; }
 
     public virtual CardEntity? DevelopmentCard { get; set; }
 
     #region Methods
-    public static CardCostEntity Create(TokenType tokenId, int count, Guid cardId)
+    public static CardCostEntity Create(GemType tokenId, int count, Guid cardId)
     {
         var cardCost = new CardCostEntity();
 

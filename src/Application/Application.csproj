@@ -8,7 +8,6 @@
 
 	<ItemGroup>
 		<Folder Include="Cards\" />
-		<Folder Include="Engine\" />
 		<Folder Include="Tokens\" />
 		<Folder Include="Players\" />
 	</ItemGroup>

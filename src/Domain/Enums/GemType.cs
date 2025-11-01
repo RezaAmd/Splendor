@@ -1,6 +1,6 @@
 ﻿namespace Domain.Enums;
 
-public enum TokenType
+public enum GemType
 {
     // الماس سفید
     Diamond = 1,
@@ -13,5 +13,5 @@ public enum TokenType
     // یاقوت سرخ
     Ruby = 5,
     // طلا
-    GoldJoker = 6
+    Gold = 6
 }

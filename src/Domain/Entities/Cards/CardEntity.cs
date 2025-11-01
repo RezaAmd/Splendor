@@ -1,15 +1,17 @@
 ﻿namespace Domain.Entities.Cards;
 
-public class CardEntity
+public class CardEntity : BaseEntity
 {
-    public TokenType TokenId { get; set; }
+    public Guid Id { get; private set; } = Guid.NewGuid();
+    public GemType TokenId { get; set; }
     public CardLevel Level { get; set; }
-    public int Points { get; set; } = 0;
+    public GemType Bonus { get; private set; }
+    public int PrestigePoints { get; set; } = 0;
 
-    public ICollection<CardCostEntity> Costs { get; set; } = default!;
+    public ICollection<CardCostEntity> Cost { get; set; } = new List<CardCostEntity>();
 
     #region Methods
-    public static CardEntity Create(TokenType tokenId, CardLevel level, int points = 0)
+    public static CardEntity Create(GemType tokenId, CardLevel level, int points = 0)
     {
         var card = new CardEntity();
 

@@ -8,6 +8,6 @@ public class AppDbContext : DbContext
 
     public DbSet<CardEntity> Cards { get; set; } = default!;
     public DbSet<CardCostEntity> CardCosts { get; set; } = default!;
-    public DbSet<NobleTileEntity> NobleTiles { get; set; } = default!;
-    public DbSet<NobleTileCostEntity> NobleTileCosts { get; set; } = default!;
+    public DbSet<NobleEntity> NobleTiles { get; set; } = default!;
+    public DbSet<NobleCostEntity> NobleTileCosts { get; set; } = default!;
 }
